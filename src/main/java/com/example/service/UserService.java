@@ -5,7 +5,7 @@ import com.example.model.User;
 import java.util.List;
 
 /**
- * lupeng@reapal.com
+ * lupeng
  * 2019/2/19
  */
 public interface UserService {

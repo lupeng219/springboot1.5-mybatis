@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 /**
- * lupeng@reapal.com
+ * lupeng
  * 2019/2/19
  */
 @Service("userService")
@@ -27,7 +27,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public List<User> findAllUser(int pageNum, int pageSize) {
-        PageHelper.startPage(pageNum,pageSize);
+        PageHelper.startPage(pageNum, pageSize);
         return userMapper.selectAllUser();
     }
 }
