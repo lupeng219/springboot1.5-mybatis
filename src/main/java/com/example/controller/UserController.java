@@ -32,6 +32,8 @@ public class UserController {
     public Object findAllUser(@PathVariable("pageNum") int pageNum, @PathVariable("pageSize") int pageSize) {
         System.out.println("进入方法");
         return userService.findAllUser(pageNum, pageSize);
+
+        
     }
 }
 
