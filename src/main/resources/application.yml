@@ -36,3 +36,10 @@ pagehelper:
     reasonable: true
     supportMethodsArguments: true
     params: count=countSql
+
+logging:
+  # logback.xml路径，默认为classpath:logback.xml
+   config: classpath:logback-spring.xml
+
+# logging.config=classpath:logback-boot.xml
+#logging.path=D:/nmyslog/nmys

@@ -3,6 +3,8 @@ package com.example.controller;
 import com.example.model.User;
 import com.example.service.UserService;
 import com.example.util.Mylog;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -20,6 +22,9 @@ public class UserController {
     @Autowired
     private UserService userService;
 
+    private static Logger LOGGER = LoggerFactory.getLogger(UserController.class);
+
+
     @ResponseBody
     @RequestMapping(value = "/add", produces = {"application/json;charset=UTF-8"})
     public int addUser(User user) {
@@ -31,6 +36,7 @@ public class UserController {
     @RequestMapping(value = "/all/{pageNum}/{pageSize}", produces = {"application/json;charset=UTF-8"})
     public Object findAllUser(@PathVariable("pageNum") int pageNum, @PathVariable("pageSize") int pageSize) {
         System.out.println("进入方法");
+        LOGGER.info("logger");
         return userService.findAllUser(pageNum, pageSize);
 
         
